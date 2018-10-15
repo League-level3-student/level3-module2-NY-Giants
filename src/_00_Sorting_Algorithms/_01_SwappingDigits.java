@@ -34,9 +34,12 @@ class _01_SwappingDigits {
 	//2. Complete the method so that it sorts the array using a bubble sort.
 	//   Iterate through the array and when you find two elements that are out
 	//   of order, swap them. Repeat this until the array is in order.
-	//public static void sortIntArray(int[] arr) {
-		
-	//}
+	public static void sortIntArray(int[] arr) {
+		int temp = 0;
+		for(int j = 0; j < arr.length; j++) {
+			
+		}
+	}
 	
 	//3. Complete the method so that it finds the middle number in the array.
 	//   *Hint* it helps to sort it first.
