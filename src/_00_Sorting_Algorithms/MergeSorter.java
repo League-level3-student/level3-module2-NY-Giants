@@ -13,11 +13,14 @@ public class MergeSorter extends Sorter {
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		// 20. call the mergeSort method with 0 and the length of the array minus one
+		mergeSort(array, 0, array.length-1, display);
+		display.updateDisplay();
 	}
 
 	private void mergeSort(int[] array, int low, int high, SortingVisualizer display) {
 		// 1. Create a temporary integer array that is the same length as the passed in
 		// array.
+		display.updateDisplay();
 		int[] temparray = new int[array.length];
 
 		// 2. make an if statement that checks if low is less than high
@@ -29,18 +32,37 @@ public class MergeSorter extends Sorter {
 			// 4. call the mergeSort method with low and middle
 			mergeSort(array, low, middle, display);
 			// 5. call the mergeSort method with middle + 1 and high
-			mergeSort(array, middle+1, high, display);
-			// 6. copy the element from the array into the temporary array,
+			mergeSort(array, middle + 1, high, display);
+			// 6. copy the elements from the array into the temporary array,
 			// but only the elements from low to high inclusive
-			for(int i = 0; i < 100; i++) {
-				
+			for (int i = 0; i < array.length; i++) {
+				if (i >= low && i <= high) {
+					temparray[i] = array[i];
+				}
 			}
 			// 7. create three integers called i, j, and k and
 			// set them equal to low, middle + 1, and low respectively
-
+			int i = low;
+			int j = middle + 1;
+			int k = low;
 			// 8. while i is less than or equal to middle
 			// and j is less than or equal to high
-
+			while (i <= middle && j <= high) {
+				if (temparray[i] <= temparray[j]) {
+					array[k] = temparray[i];
+					i += 1;
+				} else {
+					array[k] = temparray[j];
+					j += 1;
+					
+				}
+				k += 1;
+			}
+			while (i <= middle) {
+				array[k] = temparray[i];
+				k += 1;
+				i += 1;
+			}
 			// 9. if temp array at i is less than or equal
 			// to temp array at j
 
