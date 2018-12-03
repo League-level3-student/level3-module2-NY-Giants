@@ -30,13 +30,27 @@ class _04_SearchTest {
 		// 1. use the assertEquals method to test your linear search method.
 		assertEquals(0, _01_BinarySearch.binarySearch(yeet, 0, 4, revael));
 	}
-	/*
-	 * @Test public void testInterpolationSearch() { //3. use the assertEquals
-	 * method to test your interpolation search method. // remember that the array
-	 * must be sorted and evenly distributed }
-	 * 
-	 * @Test public void testExponentialSearch() { //4. use the assertEquals method
-	 * to test your exponential search method. // remember that the array must be
-	 * sorted }
-	 */
+	
+	  @Test public void testInterpolationSearch() { 
+		  //3. use the assertEqual method to test your interpolation search method. 
+		  // remember that the array must be sorted and evenly distributed 
+		  int[] yeet = new int[] { 1, 2, 3, 4 };
+
+			int revul = yeet[0];
+			// 1. use the assertEquals method to test your linear search method.
+			assertEquals(0, _02_InterpolationSearch.interpolationSearch(yeet, revul));
+		}
+		  
+	  
+	  @Test public void testExponentialSearch() { 
+		  //4. use the assertEquals method to test your exponential search method. 
+		  // remember that the array must be sorted 
+			int[] yeet = new int[] { 1, 2, 3, 4 };
+
+			int revwl = yeet[0];
+			// 1. use the assertEquals method to test your linear search method.
+			assertEquals(0, _01_BinarySearch.binarySearch(yeet, 0, 4, revwl));
+		}
+		  
+	 
 }
