@@ -60,13 +60,12 @@ public class _00_MoreAndMoreTests {
 	}
 
 	public boolean isSquare(int i) {
-
-		for(int j = 2; j < i; j++) {
-			if(i*i%j*j == 0) {
-				return false;
+		for(int j = 0; j <= i; j++) {
+			if(j*j == i) {
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
 	@Test
@@ -84,7 +83,12 @@ public class _00_MoreAndMoreTests {
 
 	public boolean isCube(int i) {
 
+		for(int j = 0; j <= i; j++) {
+			if(j*j*j == i) {
+				return true;
+			}
+		}
 		return false;
-	}
 
+}
 }
