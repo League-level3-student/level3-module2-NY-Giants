@@ -2,6 +2,7 @@
 public class Checkpoint {
 	public static void main(String[] args) {
 		System.out.println("(Microphone Static) Testing, attention please");
+		System.out.println("HI");
 	}
 	void doubletake(Double[] morethanonce){
 		for(int i = 0; i < morethanonce.length; i++) {
@@ -20,7 +21,8 @@ public class Checkpoint {
 	boolean integertake(int[] inttakeem, int g) {
 		for(int i = 0; i < inttakeem.length; i++) {
 			for(int j = 0; j < inttakeem.length - i - 1; j++) {
-				if(inttakeem[j] < inttakeem[j+1]) {
+				if(inttakeem[j] == g) {
+					return true;
 					
 				}
 				else {
