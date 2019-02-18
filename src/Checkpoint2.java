@@ -8,9 +8,10 @@ public class Checkpoint2 {
 		for (int i = 0; i < ALT.length; i++) {
 			ET = JOptionPane.showInputDialog("Pick a number");
 			DD = Integer.parseInt(ET);
+			
 		}
 		for (int j = 0; j < ALT.length; j++) {
-			JOptionPane.showMessageDialog(null, ALT);
+			JOptionPane.showMessageDialog(null, "hi");
 		}
 	}
 }
